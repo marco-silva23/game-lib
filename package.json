@@ -31,6 +31,7 @@
   "homepage": "https://github.com/marco-silva23/game-lib#readme",
   "devDependencies": {
     "@arethetypeswrong/cli": "^0.17.4",
+    "jsdom": "^26.1.0",
     "prettier": "^3.5.3",
     "typescript": "^5.8.3",
     "vitest": "^3.1.2"
