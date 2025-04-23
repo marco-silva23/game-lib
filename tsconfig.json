@@ -24,5 +24,8 @@
 
     /* AND if you're building for a library: */
     //"declaration": true
-  }
+  },"include": [
+    "src/**/*",
+    "src/**/*.ts"
+  ],
 }
