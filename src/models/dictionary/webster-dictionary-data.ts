@@ -33,7 +33,7 @@ interface CxsItem {
   [key: string]: any;
 }
 
-export interface WebsterDictionaryData {
+export interface WebsterDictionaryInterface {
   meta: Meta;
   hwi: Hwi;
   fl?: string; // Optional property
@@ -43,4 +43,38 @@ export interface WebsterDictionaryData {
   date?: string; // Optional property
   shortdef: string[];
   cxs?: CxsItem[]; // Optional property
+}
+
+export class WebsterDictionaryData implements WebsterDictionaryInterface {
+  meta: Meta;
+  hwi: Hwi;
+  fl?: string | undefined;
+  ins?: InsItem[] | undefined;
+  def?: DefItem[] | undefined;
+  et?: EtItem[][] | undefined;
+  date?: string | undefined;
+  shortdef: string[];
+  cxs?: CxsItem[] | undefined;
+
+  constructor(word: string = '') {
+    this.meta = {
+      id: word,
+      uuid: '',
+      sort: '',
+      src: '',
+      section: '',
+      stems: [],
+      offensive: false,
+    };
+    this.hwi = { hw: '', prs: [] };
+    this.shortdef = [];
+  }
+
+  get word(): string {
+    return this.meta.id;
+  }
+
+  get definitions(): string[] {
+    return this.shortdef;
+  }
 }
