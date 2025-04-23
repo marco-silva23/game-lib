@@ -17,13 +17,17 @@
     "noImplicitOverride": true,
 
     /* If transpiling with TypeScript: */
-    "module": "Preserve"
+    "module": "Preserve",
     // "outDir": "dist",
     // "rootDir": "src",
     // "sourceMap": true,
 
     /* AND if you're building for a library: */
     //"declaration": true
+    "baseUrl": ".",
+    "paths": {
+      "@models/*": ["src/models/*"]
+    }
   },
   "include": ["src/**/*", "src/**/*.ts"]
 }

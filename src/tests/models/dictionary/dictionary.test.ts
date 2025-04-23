@@ -1,5 +1,5 @@
 import { test, expect } from 'vitest';
-import { WebsterDictionaryData } from '../../../models/dictionary/webster-dictionary-data';
+import { WebsterDictionaryData } from '@models/dictionary/webster-dictionary-data';
 
 test('model construtor', () => {
   const websterDictionaryData = new WebsterDictionaryData();

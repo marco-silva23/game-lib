@@ -1,14 +1,9 @@
-import path from 'path';
+import { defineConfig } from 'vitest/config';
+import tsconfigPaths from 'vite-tsconfig-paths';
 
-export default {
-  plugins: [],
+export default defineConfig({
   test: {
-    globals: true,
-    environment: 'jsdom',
+    // You can add additional Vitest configuration options here
   },
-  resolve: {
-    alias: {
-      '@': path.resolve(__dirname, './src'),
-    },
-  },
-};
+  plugins: [tsconfigPaths()],
+});
