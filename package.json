@@ -1,6 +1,6 @@
 {
-  "name": "gamelib",
-  "version": "1.0.0",
+  "name": "sigamelib",
+  "version": "1.0.1",
   "description": "A game library.",
   "main": "dist/index.js",
   "type": "module",
